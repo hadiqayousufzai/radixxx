@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Change to column direction */
+            height: 100vh;
+            background-color: #f9f9f9;
+            justify-content: center; /* Centering the content */
+            align-items: center;     /* Centering the content */
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Change to column direction */
+            width: 80%; /* Set a width for the overall layout */
+            height: auto; /* Allow height to adjust based on content */
+            gap: 20px;  /* Space between sections */
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between; /* Space between items */
+            gap: 20px; /* Space between items */
+            margin-bottom: 20px; /* Space below contact info */
+        }
+        .info-item {
+            flex: 1; /* Equal width for all items */
+            display: flex;
+            align-items: center; /* Center icons vertically */
+            border: 1px solid #007BFF; /* Border color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 15px; /* Inner spacing */
+            background-color: #fff; /* White background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .info-item i {
+            margin-right: 10px; /* Space between icon and text */
+            color: #007BFF; /* Icon color */
+        }
+        .map-form-container {
+            display: flex;
+            gap: 40px; /* Space between map and form */
+            width: 100%; /* Full width of the container */
+        }
+        .map {
+            flex: 1;
+            background-color: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px; /* Rounded corners */
+            height: 450px; /* Increased height for the map */
+        }
+
+        .map:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form {
+            flex: 1;
+            padding: 20px;
+            background-color: #dcdcdc; /* Gray background color */
+            border: 2px solid #babec2; /* Gray border color */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 400px; /* Increased height for the form */
+        }
+        .contact-form:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+        }
+        input, textarea {
+            width: calc(100% - 20px); /* Adjusted width for padding */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+            box-sizing: border-box; /* Ensures padding is included in the width */
+        }
+        textarea {
+            height: 80px; /* Set a specific height for the textarea */
+        }
+        input:focus, textarea:focus {
+            border-color: #d9534f; /* Focus border color */
+            outline: none;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #d9534f; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #c9302c; /* Darker shade on hover */
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="contact-info">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <strong>Address:</strong><br>
+                 <!-- address -->
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+                <strong>Phone:</strong><br>
+                <!-- 061 111 913 913 -->
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <strong>Email:</strong><br>
+                <!-- <a href="mailto:info@test.servomotoroil.com">info@test.RadixLubricant.com</a> -->
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+                <!-- <strong>Open Hours:</strong><br>
+                Monday to Friday: 09:00 AM – 05:00 PM -->
+            </div>
+        </div>
+    </div>
+
+    <div class="map-form-container">
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509304!2d144.95373531531603!3d-37.81720997975184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11bdb9%3A0x5045675218cee3e5!2sYour+Location!5e0!3m2!1sen!2sin!4v1613658031123!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="contact-form">
+            <h2>Get In Touch With Us</h2>
+            <p>If you wish to directly reach us, please fill out the form below:</p>
+            <form action="your-server-endpoint" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message (optional):</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+

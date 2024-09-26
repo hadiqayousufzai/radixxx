@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greases</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: white; /* White background for the entire page */
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: rgb(202, 46, 46); /* Heading color */
+            font-size: 50px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between cards */
+            flex-wrap: wrap; /* Wrap cards on smaller screens */
+            background-color: rgb(248, 248, 248); /* Grey background for the card container */
+            padding: 10px; /* Padding for the container */
+            border-radius: 10px; /* Rounded corners for the container */
+            width: 60%; /* Full width of the container */
+            max-width: 1200px; /* Max width for the container */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+
+        .card {
+            width: 300px; /* Fixed width */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s; /* Animation */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Initial shadow */
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px; /* Increased height for images */
+            object-fit: fill; /* Ensure the image covers the space */
+                }
+
+        .card-content {
+            padding: 15px; /* Padding for content area */
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            margin: 5px 0; /* Space between texts */
+            font-size: 16px; /* Second text size */
+        }
+
+        .price{
+            color: blue;
+        }
+
+        .add-to-cart {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Space above button */
+        }
+
+        .add-to-cart:hover {
+            background-color: darkred; /* Darker red on hover */
+            transform: translateY(-3px);
+
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 90%; /* Responsive width for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Grease Oil</h1>
+<div class="card-container">
+    <div class="card">
+        <img src="images/Grease.jpeg" alt="Grease oil 1">
+        <div class="card-content">
+            <h3>Grease Oil Model 1</h3>
+            <p>Details about Grease Oil Model 1</p>
+            <p class="price">Price: $10,000</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="images/Multi Purpose Grease Lithium Base.jpeg" alt="Grease oil 2">
+        <div class="card-content">
+            <h3>Grease Oil Model 2</h3>
+            <p>Details about Grease Oil Model 2</p>
+            <p class="price">Price: $12,000</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    
+</div>
+
+
+    
+</body>
+</html>
